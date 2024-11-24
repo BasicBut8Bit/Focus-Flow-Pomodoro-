@@ -1,0 +1,158 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    min-height: 100vh; /* Ensures body is at least the height of the viewport */
+    display: flex;
+    flex-direction: column; /* Allows stacking of header, main content, and footer */
+    background: linear-gradient(to bottom, #f4f4f9, #0072ff); /* Gradient effect for the whole page */
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(to right, #00c6ff, #005ac7); 
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    flex-shrink: 0; /* Prevents header from shrinking */
+}
+
+header h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+.cta-btn {
+    background-color: #fff;
+    color: #0072ff;
+    font-size: clamp(14px, 2.5vw, 18px);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between; /* Space cards evenly across the row */
+    align-items: center; /* Vertically center cards */
+    padding: 40px 5%;
+    background-color: #fff;
+    text-align: center;
+    gap: 20px; /* Evenly spaces between feature cards */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.feature {
+    flex: 1; /* Make all cards take equal space */
+    max-width: 30%; /* Constrain the width for large screens */
+    min-width: 300px; /* Ensures cards are large even on smaller screens */
+    padding: 40px; /* Increase padding for a larger look */
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #e4f1ff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.feature h3 {
+    font-size: 32px; /* Larger font for feature titles */
+    margin-bottom: 20px;
+}
+
+.feature p {
+    font-size: 20px; /* Slightly larger font for descriptions */
+    color: #555;
+}
+
+/* Footer Section with Gradient */
+footer {
+    background: linear-gradient(to top, #0072ff, #f4f4f9); /* Gradient effect from blue to white */
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0; /* Prevents footer from shrinking */
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer small {
+    font-size: 12px;
+    color: #dcdcdc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .feature {
+        max-width: 45%; /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column; /* Stacks features vertically */
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%; /* Almost full-width cards for smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .feature {
+        width: 95%;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}

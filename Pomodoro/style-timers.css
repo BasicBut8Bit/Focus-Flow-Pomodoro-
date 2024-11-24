@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+/* Timer Display */
+h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Timer Button */
+.timer-btn {
+    background-color: #0072ff;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Timer Container */
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Timer Section */
+.timers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Input Fields and Labels */
+.timer-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.timer-settings label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.timer-settings input {
+    width: 60%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect for input */
+.timer-settings input:focus {
+    border-color: #0072ff;
+    outline: none;
+}
+
+/* Timer Section when inputs are visible */
+.timer-settings input[type="number"] {
+    width: 50%;
+}
+
+/* Button Styles */
+.timer-btn.paused {
+    background-color: rgba(0, 115, 255, 0.199);
+    color: rgba(255, 255, 255, 0.199);
+}
+
+.timer-btn:hover {
+    background-color: rgb(0, 79, 175);
+    color: rgb(255, 255, 255);
+}
+
+/* Timer display */
+.timer-display {
+    margin-top: 20px;
+}
+
+/* Background transition */
+body.running {
+    background-color: #333; /* Dark grey background when the timer is running */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .timer-settings input {
+        width: 80%;
+    }
+
+    .timer-btn {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .timer-settings label {
+        font-size: 1rem;
+    }
+}
